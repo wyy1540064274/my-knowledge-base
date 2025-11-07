@@ -44,7 +44,7 @@ RDD 是 Spark 最基础的数据抽象，代表一个不可变、可分区的元
 * **举例** ：将每行文本分割成单词。
   **python**
 
-```
+```</>
   lines = ["Hello World", "Apache Spark"]
   lines_rdd = sc.parallelize(lines)
   words_rdd = lines_rdd.flatMap(lambda line: line.split(" "))
