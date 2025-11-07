@@ -1,5 +1,8 @@
-1. SparkSession (入口点)
-python
+## 1. SparkSession (入口点)
+
+**python**
+
+```
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
@@ -13,9 +16,15 @@ spark.createDataFrame() # 创建DataFrame
 spark.read            # 读取数据
 spark.stop()          # 停止Session
 spark.catalog         # 元数据操作
-2. DataFrame 核心操作
-转换操作 (Transformations)
-python
+```
+
+## 2. DataFrame 核心操作
+
+### 转换操作 (Transformations)
+
+**python**
+
+```
 df = spark.createDataFrame([...])
 
 # 列操作
@@ -44,8 +53,13 @@ df.exceptAll()        # 差集
 # 窗口函数
 from pyspark.sql.window import Window
 df.withColumn(..., Window.partitionBy(...).orderBy(...))
-行动操作 (Actions)
-python
+```
+
+### 行动操作 (Actions)
+
+**python**
+
+```
 df.show()             # 显示数据
 df.count()            # 计数
 df.collect()          # 收集到本地
@@ -53,8 +67,13 @@ df.take() / df.head() # 获取前n行
 df.first()            # 获取第一行
 df.describe()         # 统计描述
 df.printSchema()      # 打印schema
-3. Column 操作方法
-python
+```
+
+## 3. Column 操作方法
+
+**python**
+
+```
 from pyspark.sql import functions as F
 
 # 列表达式
@@ -86,8 +105,13 @@ F.collect_list(), F.collect_set()
 F.when().otherwise()
 F.coalesce()
 F.isnull(), F.isnan()
-4. RDD 操作 (弹性分布式数据集)
-python
+```
+
+## 4. RDD 操作 (弹性分布式数据集)
+
+**python**
+
+```
 rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5])
 
 # 转换操作
@@ -109,16 +133,26 @@ rdd.first()           # 首元素
 rdd.take()            # 取前n个
 rdd.reduce()          # 归约
 rdd.foreach()         # 遍历
-5. Spark SQL 函数
-python
+```
+
+## 5. Spark SQL 函数
+
+**python**
+
+```
 # 注册临时表
 df.createOrReplaceTempView("table")
 
 # SQL查询
 spark.sql("SELECT * FROM table WHERE condition")
 spark.sql("SELECT count(*) as cnt FROM table")
-6. MLlib 机器学习
-python
+```
+
+## 6. MLlib 机器学习
+
+**python**
+
+```
 from pyspark.ml.feature import *
 from pyspark.ml.classification import *
 from pyspark.ml.regression import *
@@ -139,8 +173,13 @@ KMeans()               # K均值聚类
 # 流水线
 from pyspark.ml import Pipeline
 pipeline = Pipeline(stages=[...])
-7. Streaming 流处理
-python
+```
+
+## 7. Streaming 流处理
+
+**python**
+
+```
 from pyspark.sql.streaming import *
 
 # 读取流数据
@@ -156,8 +195,13 @@ query = df.writeStream \
     .outputMode("append") \
     .trigger(processingTime='5 seconds') \
     .start()
-8. 数据源读写
-python
+```
+
+## 8. 数据源读写
+
+**python**
+
+```
 # 读取
 df = spark.read \
     .format("csv") \
@@ -183,8 +227,13 @@ df.write \
 .mode("overwrite")    # 覆盖
 .mode("ignore")       # 忽略
 .mode("error")        # 报错(默认)
-9. 实用工具方法
-python
+```
+
+## 9. 实用工具方法
+
+**python**
+
+```
 # 配置管理
 spark.conf.set()      # 设置配置
 spark.conf.get()      # 获取配置
@@ -197,18 +246,29 @@ df.unpersist()        # 取消持久化
 # 分区操作
 df.repartition()      # 重新分区
 df.coalesce()         # 合并分区
-获取完整API文档的方法
-官方文档：
+```
 
-bash
-https://spark.apache.org/docs/latest/api/python/
-交互式查看：
+## 获取完整API文档的方法
 
-python
-help(spark.sql)
-dir(df)
-源码查看：
+1. **官方文档** ：
+   **bash**
 
-python
-import pyspark
-print(pyspark.__file__)
+```
+   https://spark.apache.org/docs/latest/api/python/
+```
+
+1. **交互式查看** ：
+   **python**
+
+```
+   help(spark.sql)
+   dir(df)
+```
+
+1. **源码查看** ：
+   **python**
+
+```
+   import pyspark
+   print(pyspark.__file__)
+```
