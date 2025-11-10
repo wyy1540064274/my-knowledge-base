@@ -1,0 +1,63 @@
+admin/!j4MLNNE68#5
+
+
+
+192.168.201.183 nanshan-bigdata-01
+192.168.201.184 nanshan-bigdata-02
+192.168.201.185 nanshan-bigdata-03
+
+
+
+http://192.168.201.185:12345/dolphinscheduler/ui/projects/list
+admin/ dolphinscheduler123"
+
+
+
+http://git.aihuoshi.net
+
+http://192.168.201.22:9870/dfshealth.html#tab-datanode
+http://192.168.201.22:8088/cluster
+http://192.168.201.183:8088/cluster
+
+
+http://192.168.201.25:8081/index?doaction=search&searchterm=hs
+username="bigdata" password="M2ipnJjTBv78LH1k"
+
+
+192.168.201.21           bigdata01.hs.com             bigdata01
+192.168.201.22           bigdata02.hs.com             bigdata02
+192.168.201.23           bigdata03.hs.com             bigdata03
+192.168.201.24           bigdata04.hs.com             bigdata04
+192.168.201.25           bigdata05.hs.com             bigdata05
+192.168.201.126           bigdata06.hs.com             bigdata06
+192.168.201.127           bigdata07.hs.com             bigdata07
+192.168.201.128           bigdata08.hs.com             bigdata08
+192.168.201.129           bigdata09.hs.com             bigdata09
+
+
+
+es
+http://192.168.201.130:5601/app/kibana#/dev_tools/console?_g=() 
+
+azkaban
+http://192.168.201.25:8081/index?doaction=search&searchterm=hs
+username="bigdata"   M2ipnJjTBv78LH1k
+
+
+GP_PROPERTIES = {
+    "database": "dm",
+    "host": "192.168.201.30",
+    "port": "1921",
+    "user": "gpdev",
+    "password": "Gj5yHH2od23UV30v",
+}
+
+PG_HOST = '192.168.200.50'
+    PG_PORT = '5432'
+    PG_DB = 'brain'
+    PG_USER = 'analysis'
+    PG_PWD = 'Aq8sn6b3ddjU2v7S'
+
+mysql:
+  192.168.201.26:3306/kjjr_credit_score_warehouse
+   root /  Gysj_2024
