@@ -7,19 +7,20 @@ admin/!j4MLNNE68#5
 192.168.201.185 nanshan-bigdata-03
 
 
-
+dolphinscheduler登录地址
 http://192.168.201.185:12345/dolphinscheduler/ui/projects/list
 admin/ dolphinscheduler123"
 
 
-
+git地址
 http://git.aihuoshi.net
 
+yarn地址
 http://192.168.201.22:9870/dfshealth.html#tab-datanode
 http://192.168.201.22:8088/cluster
 http://192.168.201.183:8088/cluster
 
-
+azkaban地址
 http://192.168.201.25:8081/index?doaction=search&searchterm=hs
 username="bigdata" password="M2ipnJjTBv78LH1k"
 
@@ -38,10 +39,6 @@ username="bigdata" password="M2ipnJjTBv78LH1k"
 
 es
 http://192.168.201.130:5601/app/kibana#/dev_tools/console?_g=() 
-
-azkaban
-http://192.168.201.25:8081/index?doaction=search&searchterm=hs
-username="bigdata"   M2ipnJjTBv78LH1k
 
 
 GP_PROPERTIES = {
